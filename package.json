@@ -1,0 +1,19 @@
+{
+  "name": "my-firebase-functions",
+  "version": "1.0.0",
+  "description": "Firebase Cloud Functions for signup and login",
+  "main": "index.js",
+  "scripts": {
+    "serve": "firebase emulators:start", 
+    "deploy": "firebase deploy --only functions"
+  },
+  "dependencies": {
+    "firebase-admin": "^11.0.0",
+    "firebase-functions": "^4.0.0",
+    "bcrypt": "^5.1.0" 
+  },
+  "engines": {
+    "node": "16"
+  },
+  "license": "MIT"
+}
