@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    /* text-decoration: underline; */
+    color: yellow;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    height: 400px;
+    margin-left:500px;
+    margin-top: 100px;
+}
+
+
+.containers {
+    /* text-align: center; */
+    color: rgb(51, 49, 49);
+    margin-left: 450px;
+    margin-top: 220px;
+    font-size: 40px;
+
+    letter-spacing: 10px;
+    border-right: 1px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+          typing 15s,
+          cursor .10s step-end infinite alternate;
+
+
+    /* animation: typing 10s steps(10) infinite; */
+    /* animation: typing 6s infinite steps(6); */
+    /* background: white; */
+    /* padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    height: 400px;
+    margin-left:500px;
+    margin-top: 100px; */
+}
+
+@keyframes cursor{
+    0% { border-color:transparent }
+}
+
+@keyframes typing {
+    from {width: 0}
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    width: calc(100% - 22px);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.hello {
+  margin-top: 500px;
+}

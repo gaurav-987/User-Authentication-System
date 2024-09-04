@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="login.html">Login</a>
+    </nav>
+
+
+    <div class="containers">
+        <h1 id="welcomeMessage">Hello!</h1>
+    </div>
+
+
+    <script>
+        // Display the personalized message
+        const params = new URLSearchParams(window.location.search);
+        const username = params.get('username');
+        if (username) {
+            document.getElementById('welcomeMessage').textContent = `Hello! ${username}`;
+        }
+    </script>
+
+
+    <!-- <div style="margin-left: 100px;">
+        <img src="https://cdn.pixabay.com/photo/2024/06/20/17/03/fishing-8842590_640.jpg">
+        <img src="https://cdn.pixabay.com/photo/2024/02/09/13/03/beach-8563083_640.jpg">
+        <img src="https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_640.jpg">
+        <img src="https://cdn.pixabay.com/photo/2023/02/01/10/37/sunset-7760143_640.jpg">
+    </div> -->
+ 
+  
+</body>
+</html>

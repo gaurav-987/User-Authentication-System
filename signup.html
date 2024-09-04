@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="login.html">Login</a>
+    </nav>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <br>
+        <form id="signupForm">
+            <input type="text" id="signupUsername" placeholder="Username" required>
+            <br><br>
+            <input type="password" id="signupPassword" placeholder="Password" required>
+            <br><br><br><br><br><br><br>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        const CLOUD_FUNCTION_URL = 'https://function-1-3f3zduwoma-uc.a.run.app/signup'; 
+
+        document.getElementById('signupForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const username = document.getElementById('signupUsername').value;
+            const password = document.getElementById('signupPassword').value;
+
+            try {
+                const response = await fetch(CLOUD_FUNCTION_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        action: 'signup',
+                        username: username,
+                        password: password,
+                    }),
+                });
+
+                const result = await response.json();
+                if (response.ok) {
+                    // Redirect to index.html with the username as a query parameter
+                    window.location.href = `index.html?username=${encodeURIComponent(username)}`;
+                } else {
+                    alert(result.error);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
